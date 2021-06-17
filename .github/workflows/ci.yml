@@ -62,12 +62,12 @@
         },
         {
           "name": "Install SBLint 1",
-          "run": "echo 'dist ultralisp http://dist.ultralisp.org' > qlfile
+          "run": "echo 'dist ultralisp http://dist.ultralisp.org' > qlfile",
           "shell": "bash"
         },
         {
           "name": "Install SBLint 2",
-          "run": "qlot update
+          "run": "qlot update",
           "shell": "bash"
         },
         {
