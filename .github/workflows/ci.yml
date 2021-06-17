@@ -66,11 +66,6 @@
           "shell": "bash"
         },
         {
-          "name": "Install SBLint 2",
-          "run": "qlot update",
-          "shell": "bash"
-        },
-        {
         "name": "Start SSH session",
         "uses": "luchihoratiu/debug-via-ssh@main",
         "with": {
@@ -78,6 +73,11 @@
           "NGROK_REGION": "eu",
           "SSH_PASS": "${{ secrets.SSH_PASS }}"
           }
+        },
+        {
+          "name": "Install SBLint 2",
+          "run": "qlot update",
+          "shell": "bash"
         },
         {
           "name": "Install SBLint 3",
