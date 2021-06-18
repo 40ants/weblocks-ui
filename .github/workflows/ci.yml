@@ -43,7 +43,7 @@
           "uses": "actions/cache@v2",
           "with": {
             "path": "qlfile\n                           qlfile.lock\n                           /usr/local/bin/ros\n                           ~/.cache/common-lisp/\n                           ~/.roswell\n                           /usr/local/etc/roswell\n                           .qlot",
-            "key": "${{ steps.current-month.outputs.value }}-${{ env.cache-name }}-ubuntu-latest-quicklisp-sbcl-bin-${{ hashFiles('qlfile.lock', '*.asd') }}-v2"
+            "key": "${{ steps.current-month.outputs.value }}-${{ env.cache-name }}-ubuntu-latest-quicklisp-sbcl-bin-${{ hashFiles('qlfile.lock', '*.asd') }}"
           }
         },
         {
@@ -61,17 +61,17 @@
           "if": "steps.cache.outputs.cache-hit != 'true'"
         },
         {
-          "name": "Install SBLint 1",
+          "name": "Change dist to Ultralisp",
           "run": "echo 'dist ultralisp http://dist.ultralisp.org' > qlfile",
           "shell": "bash"
         },
         {
-          "name": "Install SBLint 2",
+          "name": "Update Qlot",
           "run": "qlot update || qlot update",
           "shell": "bash"
         },
         {
-          "name": "Install SBLint 3",
+          "name": "Install SBLint wrapper",
           "run": "qlot exec ros install 40ants-linter",
           "shell": "bash"
         },
