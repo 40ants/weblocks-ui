@@ -2,10 +2,9 @@
  weblocks-ui
 =================
 
-.. insert-your badges like that:
+**Warning!** This repository is deprecated and was renamed to https://github.com/40ants/reblocks-ui
 
-.. image:: https://travis-ci.org/40ants/cl-hamcrest.svg?branch=master
-    :target: https://travis-ci.org/40ants/cl-hamcrest
+.. insert-your badges like that:
 
 .. Everything starting from this commit will be inserted into the
    index page of the HTML documentation.
